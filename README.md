@@ -1,6 +1,12 @@
 ## Branch Selection
 [**Global Edition**](https://github.com/Dawn-Blossoms/android_kernel_oppo_mt6750/tree/Lollipop-Global) / [**CHN Edition**](https://github.com/Dawn-Blossoms/android_kernel_oppo_mt6750/tree/Lollipop-CHN) 
 
+## Q&A
+**Why not include A71, F3, and A77?** \
+A: Their kernel sources are still not publicly available. \
+**How to get their kernel sources?** \
+A: Sending a email to the "oss@oppo.com" and  "oppo_github@oppo.com".
+
 ## Chart
 | Codename | Device |
 | :-: | :-: |
@@ -8,7 +14,6 @@
 | oppo6750_15131 | A59M/S F1S |
 | oppo6750_16021 | A39 |
 | oppo6755_15111 | R9M/TM/KM F1Plus|
-
 
 ### How to Build
 ```bash
