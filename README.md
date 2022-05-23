@@ -27,9 +27,13 @@ $ export Codename=(codename of your device)
 $ export ARCH=arm64
 $ export CROSS_COMPILE=$(pwd)/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 $ cd android_kernel_oppo_mt6750
+# Apply patch before building #
+$ wget https://github.com/Dawn-Blossoms/android_kernel_oppo_mt6750/releases/download/Backup/Fix-HeaderPath-L.patch
+$ patch -p1 < Fix-HeaderPath-L.patch
+# Patching End here #
 $ make ${Codename}_debug_defconfig
-# Optional Marcos can be found at Makefile
+# Optional Marcos can be found at Makefile #
 $ make -j$(nproc --all) 2>&1 | tee build.log
-# Kernel: arch/arm64/boot/Image.gz-dtb
-# Module: "hypnus" (Optional)
+# Kernel: arch/arm64/boot/Image.gz-dtb #
+# Module: "hypnus" (Optional) #
 ```
