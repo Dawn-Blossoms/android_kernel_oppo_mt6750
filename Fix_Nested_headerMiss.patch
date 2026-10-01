@@ -1,0 +1,22 @@
+From 7d3b50a60d7b80b483c38e3f3e9196c353b77242 Mon Sep 17 00:00:00 2001
+From: Irisu Kyouko <73088482+mxpro1996@users.noreply.github.com>
+Date: Fri, 14 Aug 2026 18:07:13 +0800
+Subject: [PATCH] [PRE] Fix as the makefile inject - double trans
+
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 917f5c50a..bf690438f 100644
+--- a/Makefile
++++ b/Makefile
+@@ -375,7 +375,7 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
+ 		   -Wno-format-security \
+ 		   -fno-delete-null-pointer-checks \
+ 		   -Werror=format -Werror=int-to-pointer-cast -Werror=pointer-to-int-cast
+-
++NOSTDINC_FLAGS += -I$$(srctree)/$$(src)
+ KBUILD_AFLAGS_KERNEL :=
+ KBUILD_CFLAGS_KERNEL :=
+ KBUILD_AFLAGS   := -D__ASSEMBLY__
